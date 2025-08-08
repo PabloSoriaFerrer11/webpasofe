@@ -54,9 +54,20 @@ section {
     margin: 20px 0;
 }
         
+p{
+    text-justify:distribute-all-lines;
+}
+
 h2 {
     color: #2c3e50;
     border-bottom: 1px solid #eee;
+    padding-bottom: 5px;
+    margin-bottom: 10px;
+}
+
+h4 {
+    color: #2c3e50;
+    text-align: center;
     padding-bottom: 5px;
     margin-bottom: 10px;
 }
@@ -67,6 +78,15 @@ footer {
     font-size: 0.9em;
     color: #7f8c8d;
 }
+
+.iconosFooter{
+    text-align: end;
+}
+
+.icon-link{
+    padding: 0.5em;
+}
+
         
 /* Responsive */
 @media (max-width: 600px) {
@@ -87,6 +107,10 @@ footer {
     
 .dropdown-menu {
     display: none;
+    /* Añade un margen superior invisible para solapar el área del botón */
+    margin-top: 10px; 
+    /* Y un padding superior negativo para compensar */
+    padding-top: 10px;
     position: absolute;
     top: 100%;
     left: 0;
@@ -99,6 +123,17 @@ footer {
     display: block;
 }
     
+/* Triángulo/conector invisible entre botón y menú */
+.dropdown-menu::before {
+    content: "";
+    position: absolute;
+    top: -10px;
+    left: 20px;
+    width: 100%;
+    height: 10px;
+    background: transparent;
+}
+
 .dropdown-menu li {
     padding: 10px;
 }
@@ -106,3 +141,4 @@ footer {
 .dropdown-menu a:hover {
     background: #007bff;
 }
+
