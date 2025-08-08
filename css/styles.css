@@ -1,0 +1,108 @@
+   /* Reset básico y estilos generales */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+        
+body {
+    line-height: 1.6;
+    background-color: #f4f4f4;
+    color: #333;
+    padding: 20px;
+}
+        
+header, main, footer {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    margin-bottom: 20px;
+}
+        
+/* Estilos del encabezado */
+header {
+    text-align: center;
+    border-bottom: 2px solid #eaeaea;
+}
+        
+h1 {
+    color: #2c3e50;
+    margin-bottom: 10px;
+}
+        
+/* Estilos de navegación */
+nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    gap: 15px;
+    margin-top: 15px;
+}
+        
+nav a {
+    text-decoration: none;
+    color: #3498db;
+    font-weight: bold;
+}
+        
+/* Estilos del contenido principal */
+section {
+    margin: 20px 0;
+}
+        
+h2 {
+    color: #2c3e50;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 5px;
+    margin-bottom: 10px;
+}
+        
+/* Estilos del pie de página */
+footer {
+    text-align: center;
+    font-size: 0.9em;
+    color: #7f8c8d;
+}
+        
+/* Responsive */
+@media (max-width: 600px) {
+    body {
+        padding: 10px;
+    }
+            
+    nav ul {
+        flex-direction: column;
+        gap: 5px;
+        }  
+}
+
+/* Dropdown */
+.dropdown {
+    position: relative;
+}
+    
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: #444;
+    min-width: 160px;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+}
+    
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+    
+.dropdown-menu li {
+    padding: 10px;
+}
+    
+.dropdown-menu a:hover {
+    background: #007bff;
+}
