@@ -12,14 +12,14 @@ body {
     color: #333;
     padding: 20px;
 }
-        
+
 header, main, footer {
-    max-width: 800px;
+    max-width: 1050px;
     margin: 0 auto;
     padding: 20px;
     background: white;
     border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    box-shadow: 0 2px 5px rgba(0, 78, 245, 0.747);
     margin-bottom: 20px;
 }
         
@@ -142,3 +142,70 @@ footer {
     background: #007bff;
 }
 
+.padding-left {
+    padding-left: 20px;
+}
+
+/* Layout de dos columnas */
+.two-column-layout {
+    display: flex;
+    gap: 30px;
+}
+
+.sidebar {
+    flex: 1;
+    background: #f8f9fa;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+/* Estilos para el sidebar */
+.sidebar h3 {
+    color: #2c3e50;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 10px;
+    margin-bottom: 15px;
+}
+
+.sidebar ul {
+    padding-left: 20px;
+    margin-bottom: 20px;
+}
+
+.sidebar li {
+    margin-bottom: 8px;
+}
+
+.highlight-box {
+    background: #e3f2fd;
+    padding: 15px;
+    border-radius: 8px;
+    margin-top: 20px;
+}
+
+.signup-button {
+    background-color: #3498db;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+    width: 100%;
+}
+
+.signup-button:hover {
+    background-color: #2980b9;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .two-column-layout {
+        flex-direction: column;
+    }
+    
+    .sidebar {
+        margin-top: 20px;
+    }
+}
