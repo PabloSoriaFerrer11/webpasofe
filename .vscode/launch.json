@@ -1,0 +1,30 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+
+        {
+            "type": "chrome",
+            "request": "launch",
+            "name": "Open index.html",
+            "url": "http://localhost:8080/index.html", 
+            "file": "d:\\Codigo_GIT\\webpasofe\\index.html"
+        },
+        {
+            "type": "chrome",
+            "request": "launch",
+            "name": "Open contacto.html",
+            "url": "http://localhost:8080/contacto.html",
+            "file": "d:\\Codigo_GIT\\webpasofe\\contacto.html"
+        },
+        {
+            "type": "chrome",
+            "request": "launch",
+            "name": "Open flutter_amm.html",
+            "url": "http://localhost:8080/flutter_amm.html",
+            "file": "D:\\Codigo_GIT\\webpasofe\\project_amm\\flutter_amm.html"
+        }
+    ]
+}
