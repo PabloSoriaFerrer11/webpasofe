@@ -14,8 +14,21 @@ document.addEventListener("DOMContentLoaded", () => {
         body.classList.add("dark");
     }
 
+    if (localStorage.getItem("theme") === "dark") {
+        toggleBtn.textContent = "☀️ Claro";
+    } else {
+        toggleBtn.textContent = "🌙 Oscuro";
+    }
+
     toggleBtn.addEventListener("click", () => {
         body.classList.toggle("dark");
+
+        document.querySelector('header').classList.toggle("dark");
+        document.querySelector('main').classList.toggle("dark");
+        document.querySelector('footer').classList.toggle("dark");
+
+
+
         const theme = body.classList.contains("dark") ? "dark" : "light";
         localStorage.setItem("theme", theme);
     });

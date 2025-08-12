@@ -2,10 +2,14 @@
 
    :root {
        --bg-color: #f4f4f4;
-       --text-color: #333;
-       --border-shadow: rgba(0, 78, 245, 0.747);
        --bg-color-dark: #000000ec;
+
+       --text-color: #333;
        --text-color-dark: #333;
+       
+       --border-shadow: rgba(0, 78, 245, 0.747);
+       --border-shadow-dark: rgb(255, 0, 0);
+       
        --container-bg: #fff;
        --container-bg-dark: #2c2c2c;
    }
@@ -24,14 +28,7 @@
        background-color: var(--bg-color);
        color: var(--text-color);
        padding: 20px;
-
-       body.dark header,
-       body.dark main,
-       body.dark footer {
-           background: var(--container-bg-dark);
-       }
-
-       padding: 20px;
+       transition: background-color 0.3s ease, color 0.3s ease;
    }
 
    body.dark {
@@ -51,7 +48,14 @@
        border-radius: 8px;
        box-shadow: 0 2px 5px var(--border-shadow);
        margin-bottom: 20px;
+       transition: background-color 0.3s ease, box-shadow 0.3s ease;
    }
+   /* background: var(--container-bg-dark);*/
+   header.dark,
+   main.dark,
+   footer.dark {
+       box-shadow: 0 2px 5px var(--border-shadow-dark);
+   } 
 
    /* Estilos del encabezado */
    header {
