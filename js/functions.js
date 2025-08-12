@@ -4,3 +4,19 @@ function enviarCorreoBeta() {
     const cuerpo = encodeURIComponent("Hola, quiero probar la beta.");
     window.location.href = `mailto:${correo}?subject=${asunto}&body=${cuerpo}`;
 };
+
+// Función para alternar el tema oscuro/claro
+document.addEventListener("DOMContentLoaded", () => {
+    const body = document.body;
+    const toggleBtn = document.getElementById("theme-toggle");
+
+    if (localStorage.getItem("theme") === "dark") {
+        body.classList.add("dark");
+    }
+
+    toggleBtn.addEventListener("click", () => {
+        body.classList.toggle("dark");
+        const theme = body.classList.contains("dark") ? "dark" : "light";
+        localStorage.setItem("theme", theme);
+    });
+});
