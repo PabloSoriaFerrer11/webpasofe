@@ -12,13 +12,18 @@ document.addEventListener("DOMContentLoaded", () => {
 
     if (localStorage.getItem("theme") === "dark") {
         body.classList.add("dark");
-    }
 
-    if (localStorage.getItem("theme") === "dark") {
+        document.querySelector('header').classList.add("dark");
+        document.querySelector('main').classList.add("dark");
+        document.querySelector('footer').classList.add("dark");
+
         toggleBtn.textContent = "☀️ Claro";
-    } else {
+    }else{
         toggleBtn.textContent = "🌙 Oscuro";
     }
+
+
+
 
     toggleBtn.addEventListener("click", () => {
         body.classList.toggle("dark");
