@@ -32,7 +32,11 @@ document.addEventListener("DOMContentLoaded", () => {
         document.querySelector('main').classList.toggle("dark");
         document.querySelector('footer').classList.toggle("dark");
 
-
+        if (body.classList.contains("dark")) {
+            toggleBtn.textContent = "☀️ Claro";
+        } else {
+            toggleBtn.textContent = "🌙 Oscuro";
+        }
 
         const theme = body.classList.contains("dark") ? "dark" : "light";
         localStorage.setItem("theme", theme);
