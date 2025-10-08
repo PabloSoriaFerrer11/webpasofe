@@ -328,3 +328,94 @@
    .timeline .desc {
        color: #555;
    }
+
+/* ==== ToDo List Styles ==== */
+
+.todo-container {
+    background-color: var(--container-bg);
+    color: var(--text-color);
+    border-radius: 12px;
+    padding: 1.5rem 2rem;
+    box-shadow: 0 0 10px var(--border-shadow);
+    transition: all 0.3s ease;
+}
+
+.dark-mode .todo-container {
+    background-color: var(--container-bg-dark);
+    color: var(--text-color-dark);
+    box-shadow: 0 0 10px var(--border-shadow-dark);
+}
+
+/* Encabezado de la sección */
+.todo-container h2 {
+    font-size: 1.6rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    border-bottom: 2px solid var(--border-shadow);
+    padding-bottom: 0.5rem;
+}
+
+/* Texto descriptivo */
+.todo-description {
+    margin-bottom: 1rem;
+    font-size: 0.95rem;
+    color: #555;
+}
+
+.dark-mode .todo-description {
+    color: #ccc;
+}
+
+/* Lista de tareas */
+.todo-list {
+    list-style: none;
+    padding-left: 0;
+}
+
+.todo-item {
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    padding: 0.7rem 1rem;
+    margin-bottom: 0.6rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    transition: transform 0.2s ease, background-color 0.3s;
+}
+
+.todo-item:hover {
+    transform: translateY(-2px);
+    background-color: #eef3ff;
+}
+
+.dark-mode .todo-item {
+    background-color: #3b3b3b;
+}
+
+.dark-mode .todo-item:hover {
+    background-color: #4a4a4a;
+}
+
+/* Icono o marca de tarea (si lo añades más adelante) */
+.todo-item::before {
+    content: "✔️";
+    margin-right: 0.5rem;
+    font-size: 1rem;
+}
+
+/* Enlaces o botones dentro de la lista */
+.todo-item a {
+    color: var(--border-shadow);
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.todo-item a:hover {
+    text-decoration: underline;
+}
+
+/* Transición entre modos */
+body, .todo-container, .todo-item {
+    transition: background-color 0.3s, color 0.3s, box-shadow 0.3s;
+}
